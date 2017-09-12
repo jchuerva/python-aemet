@@ -1,9 +1,9 @@
 import os
-from pathlib import Path
+from os.path import expanduser
 
 # Constants
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-HOME_DIR = str(Path.home())
+HOME_DIR = expanduser("~")
 AEMET_DIR = os.path.join(HOME_DIR, '.aemet')
 
 if not os.path.exists(AEMET_DIR):
